@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b1759ef1-348c-490c-bdac-54ef6f2e7403/resourceGroups/Testeo/providers/Microsoft.Web/sites/WheaterAPI",
+    "appService.deploySubpath": "."
+}
