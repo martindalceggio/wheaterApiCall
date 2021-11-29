@@ -37,7 +37,7 @@ async function renderUsers() {
                                     <li><h2>Indice UV: ${x.uv}</h2></li>
                                     <li><h2>Amanecer: ${(x.sunrise)}</h2></li>
                                     <li><h2>Anochecer: ${x.sunset}</h2></li>
-                                    <li><h2>Nubosidad: ${x.clouds}</h2></li>
+                                    <li><h2>Nubosidad: ${x.clouds} %</h2></li>
                                     <li><img src="https://www.weatherbit.io/static/img/icons/${x.weather.icon}.png"></h2></li>
                                     <li><h2>El cielo se encuentra ${x.weather.description}</h2></li>
                                 </ul>
