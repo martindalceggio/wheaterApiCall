@@ -8,6 +8,7 @@ async function getWeather() {
     }
 }
 async function renderUsers() {
+
     let users = await getWeather();
     let html = '';
     console.log("aca estoy JS");
@@ -22,12 +23,12 @@ async function renderUsers() {
 
             html += htmlSegment;
         }); */
+        
         users.data.forEach(x => {
-
             let htmlSegment = `<div class="user">
+                                <h3> ${new Date(x.ts *1000).toLocaleString()} </h3>
                                 <ul>
                                     <li><h2>Ciudad: ${x.city_name}</h2></li>
-                                    <li><h2>Fecha y hora: ${x.ob_time}</h2></li>
                                     <li><h2>Direccion del Viento: ${x.wind_cdir_full}</h2></li>
                                     <li><h2>Velocidad del viento: ${(x.wind_spd * 3.6).toFixed(1)}</h2></li>
                                     <li><h2>Presion (mb): ${x.pres}</h2></li>
@@ -35,7 +36,7 @@ async function renderUsers() {
                                     <li><h2>Sensacion termica: ${x.app_temp}</h2></li>
                                     <li><h2>Humedad: ${(x.rh).toFixed(0)}</h2></li>
                                     <li><h2>Indice UV: ${x.uv}</h2></li>
-                                    <li><h2>Amanecer: ${(x.sunrise)}</h2></li>
+                                    <li><h2>Amanecer: ${String(x.sunrise)}</h2></li>
                                     <li><h2>Anochecer: ${x.sunset}</h2></li>
                                     <li><h2>Nubosidad: ${x.clouds} %</h2></li>
                                     <li><img src="https://www.weatherbit.io/static/img/icons/${x.weather.icon}.png"></h2></li>
